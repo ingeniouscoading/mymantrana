@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block page %}Books{% endblock page %}
+{% load static %}
+{% block books %}
+<!-- books page contents  -->
+<div class="container-fluid bg-primary p-2">
+    <h1 class="display-1 fw-bold text-center text-light">Books Page</h1>
+</div>
+<div class="container p-4">
+    <div class="row g-2">
+        {% for b in books %}
+        <div class="col-sm-6">
+            <div class="card" data-aos="fade-{% cycle 'right' 'left' %}">
+                <div class="card-header"><h6>{{ b.book_title }}</h6></div>
+                <div class="card-body">{{ b.book_author1 }}</div>
+                <div class="card-footer"><button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" href="{{ b.buy_link1 }}">Buy Now</a></button></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- books page contents  -->
+{% endblock books %}

@@ -1,0 +1,8 @@
+# Framework used
+django == 4.1.7
+
+# python image library
+pillow == 9.4.0
+
+# Admin Interface
+django-jazzmin
